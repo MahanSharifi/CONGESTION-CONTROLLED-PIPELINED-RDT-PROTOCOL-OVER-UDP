@@ -15,7 +15,7 @@ field. It will be in the range of 0 to 500. The data string is be exactly length
 SYN and ACK packets, length is be set to zero. A reference implementation of the packet format is
 provided to you as a Python 3 file named “packet.py”. 
 
-#Sender
+# Sender
  <host address of the network emulator>,
  <UDP port number used by the emulator to receive data from the sender>,
  <UDP port number used by the sender to receive ACKs from the emulator>,
@@ -58,7 +58,7 @@ seqnum=0.
 
 
 
-#Reciever:
+# Reciever:
 <hostname for the network emulator>,
  <UDP port number used by the link emulator to receive ACKs from the receiver>,
  <UDP port number used by the receiver to receive data from the emulator>, and
