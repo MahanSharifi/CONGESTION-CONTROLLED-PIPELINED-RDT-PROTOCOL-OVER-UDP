@@ -11,8 +11,8 @@ packet, and 3 if it is the synchronization (SYN) packet (see the definition and 
 below). For data packets, seqnum is the modulo 32 sequence number of the packet. The seqnum of the
 SYN packet and the first data packet should be zero. For ACK packets, seqnum is the sequence number of
 the packet being acknowledged. The length field specifies the number of characters carried in the data
-field. It should be in the range of 0 to 500. The data string should be exactly length bytes long. For EOT,
-SYN and ACK packets, length should be set to zero. A reference implementation of the packet format is
+field. It will be in the range of 0 to 500. The data string is be exactly length bytes long. For EOT,
+SYN and ACK packets, length is be set to zero. A reference implementation of the packet format is
 provided to you as a Python 3 file named “packet.py”. 
 
 #Sender
@@ -28,7 +28,7 @@ a SYN packet to the receiver (through the network emulator) every 3 seconds, unt
 packet from the receiver. The SYN packets have a seqnum of 0.
 In the data transmission stage, the sender program reads data from the specified file and sends it using
 the congestion controlled RDT protocol to the receiver via the network emulator. The initial window size
-should be set to N=1 packet, and the seqnum for the initial data packet is set to 0. After all content of
+is to be set to N=1 packet, and the seqnum for the initial data packet is set to 0. After all content of
 the file has been transmitted successfully to the receiver (and all corresponding ACKs have been
 received), the sender transitions to the connection termination stage.
 
@@ -63,7 +63,7 @@ seqnum=0.
  <UDP port number used by the link emulator to receive ACKs from the receiver>,
  <UDP port number used by the receiver to receive data from the emulator>, and
  <name of the file into which the received data is written>.
-When receiving packets sent from the sender via the network emulator, it should execute the following:
+When receiving packets sent from the sender via the network emulator, it will execute the following:
 • If it is a SYN packet, send a SYN packet back, otherwise:
 o Check the sequence number of the packet.
 o If the sequence number is the one that it is expecting:
