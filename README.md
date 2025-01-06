@@ -17,11 +17,11 @@ SYN and ACK packets, length is be set to zero. A reference implementation of the
 provided to you as a Python 3 file named “packet.py”. 
 
 # Sender
- <host address of the network emulator>,
- <UDP port number used by the emulator to receive data from the sender>,
- <UDP port number used by the sender to receive ACKs from the emulator>,
- <timeout interval in units of millisecond>, and
- <name of the file to be transferred>
+* host address of the network emulator,
+* UDP port number used by the emulator to receive data from the sender,
+* UDP port number used by the sender to receive ACKs from the emulator,
+* timeout interval in units of millisecond, and
+* name of the file to be transferred
 
 Upon execution, the sender program goes through 3 stages: (i) connection establishment, (ii) data
 transmission, and (iii) connection termination. In the connection establishment stage, the sender sends
@@ -60,10 +60,11 @@ seqnum=0.
 
 
 # Reciever:
-<hostname for the network emulator>,
- <UDP port number used by the link emulator to receive ACKs from the receiver>,
- <UDP port number used by the receiver to receive data from the emulator>, and
- <name of the file into which the received data is written>.
+* hostname for the network emulator,
+* UDP port number used by the link emulator to receive ACKs from the receiver,
+* UDP port number used by the receiver to receive data from the emulator, and
+* name of the file into which the received data is written.
+  
 When receiving packets sent from the sender via the network emulator, it will execute the following:
 • If it is a SYN packet, send a SYN packet back, otherwise:
 o Check the sequence number of the packet.
