@@ -1,4 +1,5 @@
-# CONGESTION-CONTROLLED-PIPELINED-RDT-PROTOCOL-OVER-UDP - CODE AVAILABLE UPON REQUEST
+# CONGESTION-CONTROLLED-PIPELINED-RDT-PROTOCOL-OVER-UDP 
+# CODE AVAILABLE UPON REQUEST
 All packets exchanged between the sender and the receiver have the following structure:
 integer type; // 0: ACK, 1: Data, 2: EOT, 3: SYN
 integer seqnum; // Modulo 32
